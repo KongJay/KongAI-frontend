@@ -27,8 +27,8 @@ export async function listAppChatHistory(
   return request<API.BaseResponsePageChatHistory>(`/chatHistory/app/${param0}`, {
     method: 'GET',
     params: {
-      // arg1 has a default value: 10
-      arg1: '10',
+      // pageSize has a default value: 10
+      pageSize: '10',
       ...queryParams,
     },
     ...(options || {}),
@@ -67,8 +67,8 @@ export async function page(
     method: 'GET',
     params: {
       ...params,
-      arg0: undefined,
-      ...params['arg0'],
+      page: undefined,
+      ...params['page'],
     },
     ...(options || {}),
   })
